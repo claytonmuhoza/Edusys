@@ -1,0 +1,301 @@
+html,body{
+    height: 100%;
+    width: 100% auto;
+    padding: 0;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+}
+
+.body{
+    max-width: 1600px;
+}
+/******************************/
+
+nav{
+    position: sticky;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    background-color: #FFF;
+}
+.navbar-nav-side{
+    display: flex;
+    padding: 5px;
+}
+
+.navbar-nav{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu{
+    list-style-type: none;
+
+}
+
+.navbar-logo img{
+    height: 45px;
+    width: 130px;
+}
+
+nav a{
+    color: red;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: rgba(255, 0, 0, 0.439);
+}
+
+
+ .active{
+    color: red;
+}
+
+.nav-link:hover{
+    color: red;
+}
+
+
+.triangle{
+    position: absolute;
+    right: 500px;
+	width: 0;
+	height: 0;
+	border-width: 0 0 60px 60px;
+	border-color: transparent transparent #FF0000 transparent;
+	border-style: solid;
+}
+.navbar-search-side{
+    position: absolute;
+    width: 500px;
+    height: 60px;
+    display: flex;
+    right: 0;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar{
+    display: flex;
+    background-color: #FFF;
+    width: 360px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.search-input{
+    background: none;
+    width: 320px;
+    padding-left: 10px;
+    color: red;
+    font-family: 'Outfit' sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+
+.btn-search{
+    background-color: #1b67e9a6;
+    width: 40px;
+    outline: none;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-search:hover{
+    background-color: #1b66e9;
+}
+
+
+/*************************************/
+
+.my-container{
+    padding: 20px;
+    margin: 0;
+    width: auto;
+}
+main{
+    height: 100%;
+    width: 100%;
+    /*height: 700px;*/
+    /*min-height: 100vh;
+    min-width: 100vw;*/
+    background: url(/assets/img/bg_ulbu1.jpg) center fixed no-repeat ;
+    background-size: cover;
+}
+
+.main-content{
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 320px;
+}
+
+.side{
+    /*width: 50%;*/
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+.mon-edusys{
+    width: 230px;
+    border-bottom: 8px solid #F5D11C;
+}
+.mon-edusys span{
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.mon-edusys span:first-child{
+    color: #F5D11C;
+}
+.mon-edusys span:last-child{
+    color: #FFF;
+}
+
+.page-adress{
+    width: 300px;
+}
+
+.page-adress img{
+    height: 30px;
+    width: 30px;
+}
+
+.page-adress span{
+    color: #F5D11C;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/*/////////////////////////////////////////*/
+
+
+
+.login-form{
+    /*width: 50%;*/
+}
+
+form{
+    font-family: 'Outfit',sans-serif;
+}
+#icon-pres{
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    text-align: center;
+}
+.form-container{
+    width: 350px;
+    /*border-left: 1px solid #ffff;
+    line-height: 50px;
+    border-right: 1px solid #fff;*/
+    box-shadow: 2px 2px 10px rgb(126, 126, 175);
+    text-align: center;
+}
+
+.form-container .title{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffff;
+}
+
+.my-form-element{
+    width: 300px;
+    margin: 10px;
+}
+
+.form-input{
+    display: flex;
+    padding: 4px;
+    gap: 5px;
+    background-color: #162d56c7;
+    
+    border-radius: 10px;
+}
+
+main input{
+    width: 300px;
+    height: 25px;
+    background: none;
+    margin-top: 0%;
+    outline: none;
+    border: none;
+    color: #FFF;
+    font-size: 1.2rem;
+}
+
+.material-icons{
+    height: 27px;
+    margin-top: 5px;
+    color: #FFF;
+}
+
+.btn-primary{
+    width: 308px;
+    color: #FFF;
+    background-color: #162d56c7;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.btn-primary:hover{
+    background-color: #1b66e9;
+}
+
+.my-form-element span{
+    color: #FFF;
+}
+/***************/
+
+.contact{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.banner{
+    height: 100px;
+    position: absolute;
+    bottom: -120px;
+}
+
+/******************/
+
+footer{
+    background-color: #162d56;
+    height: 40px;
+    padding: 10px;
+}
+footer span{
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px;
+    color: #FFF;
+
+}
+
+
+@media all and (max-width: 800px) {
+    body{
+        display: none;
+    }
+}
