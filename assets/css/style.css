@@ -129,7 +129,7 @@ main{
     /*height: 700px;*/
     /*min-height: 100vh;
     min-width: 100vw;*/
-    background: url(/assets/img/bg_ulbu1.jpg) center fixed no-repeat ;
+    background: url(../img/bg_ulbu1.jpg) center fixed no-repeat ;
     background-size: cover;
 }
 
