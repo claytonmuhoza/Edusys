@@ -147,6 +147,7 @@ nav a{
 }
 
 .scan-qr{
+    display: none;
     cursor: pointer;
     margin-left: 10px;
 }
@@ -394,7 +395,7 @@ footer a{
     #btn-menu:hover{
         color: #000
     }
-
+    
     nav{
         position: fixed;
         flex-direction: column;
@@ -414,6 +415,11 @@ footer a{
 
     .navbar-search-side{
         width: 100%;
+    }
+
+    .scan-qr{
+        display: block;
+
     }
 
     /******* SIDEBAR (MENU) ***********/
