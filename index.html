@@ -5,93 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no ">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!--link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"-->
+    <script src="assets/js/script.js" defer></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Login</title>
 </head>
 <body>
 
-    <header>
-
-    </header>
-      <nav>
-        <div class="navbar-nav-side">
-            <a class="navbar-brand navbar-logo" href="#"><img src="https://edusys.ulbu.bi/theme/logo_edu.jpg" alt=""></a>
-            <ul class="navbar-nav">
-                <li class="nav-menu">
-                    <a href="#" class="nav-link active"> Acceuil </a>
-                </li>
-                <li class="nav-menu">
-                    <a href="#" class="nav-link"> Inscription </a>
-                </li>
-                <li class="nav-menu">
-                    <a href="#" class="nav-link"> Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div class="triangle">
-        </div>
-        <div class="navbar-search-side">
-            <div class="search-bar">
-                <input class="search-input" type="search" name="search" placeholder="Rechercher un Etudiant" id="">
-                <button type="submit" class="btn-search"><span class="material-icons">
-                    search
-                </span></button>
-            </div>
-        </div>
-        
-      </nav>
-    <main>
-
-        <div class="my-container main-content">
-            <div class="my-container side">
-                <div class="mon-edusys">
-                    <span>MON</span>
-                    <span>EDUSYS</span>
+    <div id="page-container">
+        <div id="content-wrap">
+            <nav>
+                <div class="navbar-nav-right-side">
+                    <a class="navbar-brand navbar-logo" href="#"><img src="https://edusys.ulbu.bi/theme/logo_edu.jpg" alt=""></a>
+                    <ul class="navbar-nav">
+                        <li class="nav-menu">
+                            <a href="#" class="nav-link active"> Acceuil </a>
+                        </li>
+                        <li class="nav-menu">
+                            <a href="#" class="nav-link"> Inscription </a>
+                        </li>
+                        <li class="nav-menu">
+                            <a href="#" class="nav-link"> Contact</a>
+                        </li>
+                    </ul>
+                    <span id="btn-menu" class="material-icons btn-menu" onclick="openLeftMenu()">
+                        menu
+                    </span>
                 </div>
-                <div class="page-adress">
-                        <img src="https://edusys.ulbu.bi/assets/images/world.png" alt="">
-                        <span>edusys.ulbu.bi</span>
-                </div>
-                
-            </div>
-            <div class=" login-form">
-                <div class="my-container form-container">
-                    <form action="#" method="post">
-                        <img id="icon-pres" src="https://edusys.ulbu.bi/assets/images/icon_pres1.png"  alt="icon_pres1">
-                        <span class="title">Identification</span>
-                        <div class="my-form-element form-input">
-                            <span class="material-icons">
-                                person
-                                </span>
-                            <input type="text" name="username" placeholder="Identifiant ou Matricule" id="" required>
+                <div class="navbar-nav-left-side">
+                    <div class="triangle">
+                    </div>
+                    <div class="navbar-search-side">
+                        <div class="search-bar">
+                            <input class="search-input" type="search" name="search" placeholder="Rechercher un Etudiant" id="">
+                            <button type="submit" class="btn-search"><span class="material-icons">
+                                search
+                            </span></button>
                         </div>
-                        <div class="my-form-element form-input">
+                        <div class="scan-qr">
                             <span class="material-icons">
-                                lock
+                                qr_code_scanner
                             </span>
-                            <input type="password" name="password" placeholder="Mot de passe" id="" required>
                         </div>
-                        <div class="my-form-element">
-                            <button class="btn-primary" type="submit"> Connexion </button>
-                        </div>
-                        <div class="my-form-element">
-                            <span>Mot de Passe oublié?</span>
-                        </div>
-                    </form>
+                    </div>
+                    
                 </div>
+                <div id="sidebar" class="sidebar">
+                    <div class="sidebar-header">
+                        <a class="sidebar-logo" href="#"><img src="https://edusys.ulbu.bi/theme/logo_edu.jpg" alt=""></a>
+                        <span id="btn-close" class="material-icons sidebare-close-menu" onclick="closeLeftMenu()">
+                            close
+                        </span>
+                    </div>
+                    <div class="sidebar-menu">
+                        <a class="active" href="#">Acceuil</a>
+                        <a href="#">Inscription</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+
+            </nav>
+            
+            <main>
+
+                <div class="my-container main-content">
+                    <div class="my-container side">
+                        <div class="mon-edusys">
+                            <span>MON</span>
+                            <span>EDUSYS</span>
+                        </div>
+                        <div class="page-adress">
+                                <img src="https://edusys.ulbu.bi/assets/images/world.png" alt="">
+                                <span>edusys.ulbu.bi</span>
+                        </div>
+                        
+                    </div>
+                    <div class=" login-form">
+                        <div class="my-container form-container">
+                            <form action="#" method="post">
+                                <img id="icon-pres" src="https://edusys.ulbu.bi/assets/images/icon_pres1.png"  alt="icon_pres1">
+                                <span class="title">Identification</span>
+                                <div class="my-form-element form-input">
+                                    <span class="material-icons">
+                                        person
+                                        </span>
+                                    <input type="text" name="username" placeholder="Identifiant ou Matricule" id="username" required>
+                                </div>
+                                <div class="my-form-element form-input">
+                                    <span class="material-icons">
+                                        lock
+                                    </span>
+                                    <input type="password" name="password" placeholder="Mot de passe" id="password" required>
+                                </div>
+                                <div class="my-form-element">
+                                    <button class="btn-primary" type="submit"> Connexion </button>
+                                </div>
+                                <div class="my-form-element">
+                                    <span>Mot de Passe oublié?</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div class="contact">
+                <img class="banner" src="https://edusys.ulbu.bi/assets/images/gross_line_2.jpg" alt="gross_line_2">
             </div>
         </div>
-    </main>
-    <div class="contact">
-        <img class="banner" src="https://edusys.ulbu.bi/assets/images/gross_line_2.jpg" alt="gross_line_2">
+
+        <footer>
+            <div class="footer-content">
+                <span>
+                    2022 © EDUSYS- Designed & Powered with love by <a href="https://controlsys-cd.com/">ControlSys</a> 
+            </span>
+            </div>
+        </footer>
     </div>
-    <footer>
-        <div class="footer-content">
-            <span>
-                2022 © EDUSYS- Designed & Powered with love by ControlSys
-                </span>
-        </div>
-    </footer>
     
 </body>
 </html>

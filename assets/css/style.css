@@ -1,29 +1,41 @@
 html,body{
-    height: 100%;
-    width: 100% auto;
+    height: 100% auto;
+    width: 100%;
     padding: 0;
     margin: 0;
+    background: url(https://edusys.ulbu.bi/theme/bg_uldu1.jpg) center fixed no-repeat ;
+    background-size: cover;
     font-family: 'Outfit', sans-serif;
     box-sizing: border-box;
 }
 
-.body{
-    max-width: 1600px;
+#page-container{
+    width: auto;
+    display: flex;
+    flex-direction: column;
 }
+
 /******************************/
 
+.my-nav{
+    display: none;
+}
+
 nav{
-    position: sticky;
+    position: fixed;
     display: flex;
     height: 60px;
     width: 100%;
     top: 0;
     background-color: #FFF;
+    
 }
-.navbar-nav-side{
+.navbar-nav-right-side{
     display: flex;
     padding: 5px;
 }
+
+
 
 .navbar-nav{
     display: flex;
@@ -33,6 +45,10 @@ nav{
 .nav-menu{
     list-style-type: none;
 
+}
+
+#btn-menu{
+    display: none;
 }
 
 .navbar-logo img{
@@ -60,9 +76,16 @@ nav a{
     color: red;
 }
 
+.navbar-nav-left-side{
+    width: auto;
+    position: absolute;
+    display: flex;
+    right: 0;
+    gap: -2px;
+}
 
 .triangle{
-    position: absolute;
+    
     right: 500px;
 	width: 0;
 	height: 0;
@@ -71,8 +94,8 @@ nav a{
 	border-style: solid;
 }
 .navbar-search-side{
-    position: absolute;
-    width: 500px;
+
+    width: 450px;
     height: 60px;
     display: flex;
     right: 0;
@@ -101,8 +124,11 @@ nav a{
     outline: none;
 }
 
+
 .btn-search{
-    background-color: #1b67e9a6;
+    background: #fff;
+    font-weight: 600;
+    height: 100%;
     width: 40px;
     outline: none;
     border: none;
@@ -111,9 +137,34 @@ nav a{
     cursor: pointer;
 }
 
-.btn-search:hover{
-    background-color: #1b66e9;
+.btn-search .material-icons{
+    color: red;
+    font-weight: 600;
 }
+
+.btn-search .material-icons:hover{
+    color: #000;
+}
+
+.scan-qr{
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.scan-qr .material-icons{
+    color: #FFF;
+    font-size: 2rem;
+}
+
+#cam{
+    height: 20px;
+    width: 20px;
+}
+
+.sidebar{
+    display: none;
+}
+
 
 
 /*************************************/
@@ -124,13 +175,14 @@ nav a{
     width: auto;
 }
 main{
-    height: 100%;
-    width: 100%;
+    /*height: 100%;
+    width: 100%;*/
     /*height: 700px;*/
-    /*min-height: 100vh;
-    min-width: 100vw;*/
-    background: url(https://edusys.ulbu.bi/theme/bg_uldu1.jpg) center fixed no-repeat ;
-    background-size: cover;
+    margin-top: 80px;
+    height: 100vh;
+    width: 100vw;
+    /*background: url(https://edusys.ulbu.bi/theme/bg_uldu1.jpg) center fixed no-repeat ;
+    background-size: cover;*/
 }
 
 .main-content{
@@ -237,7 +289,7 @@ main input{
     font-size: 1.2rem;
 }
 
-.material-icons{
+main .material-icons{
     height: 27px;
     margin-top: 5px;
     color: #FFF;
@@ -265,13 +317,16 @@ main input{
 /***************/
 
 .contact{
+    display: none;
     height: 50px;
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: rgb(255, 255, 255);
 }
 
 .banner{
+    display: ;
     height: 100px;
     position: absolute;
     bottom: -120px;
@@ -281,21 +336,228 @@ main input{
 
 footer{
     background-color: #162d56;
-    height: 40px;
+    width: 100%;
+    min-height: 40px;
     padding: 10px;
+
+}
+.footer-content{
+    width: 100%;
+    text-align: center;
 }
 footer span{
+    width: 80%;
+    margin: auto;
     display: block;
     text-align: center;
     font-size: 1rem;
-    margin: 10px;
     color: #FFF;
 
 }
 
+footer a{
+    color: #fff;
+}
 
-@media all and (max-width: 800px) {
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    .main-content{
+        gap: 200px;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    html{
+
+    }
     body{
+        min-height: 100%;
+        /*min-height: 100%;*/
+    }
+    nav{
+        position: sticky;
+    }
+    .navbar-nav-left-side{
+        width: 100%;
+    }
+
+    #btn-menu{
+        display: block;
+        position: fixed;
+        font-size: 3rem;
+        top: 10px;
+        right: 15px;
+        color: red;
+        cursor: pointer;
+    }
+
+    #btn-menu:hover{
+        color: #000
+    }
+
+    nav{
+        position: fixed;
+        flex-direction: column;
+        height: auto;
+    }
+
+    /*.navbar-nav-right-side{
+    }*/
+
+    .navbar-nav{
         display: none;
+    }
+    .navbar-nav-left-side{
+        width: 100vw;
+        position: static;
+    }
+
+    .navbar-search-side{
+        width: 100%;
+    }
+
+    /******* SIDEBAR (MENU) ***********/
+
+    .sidebar{
+        display: none;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+        z-index: +1;
+    }
+    
+    .sidebar-header{
+        display: flex;
+    }
+    
+    .sidebar-logo img{
+        margin-left: -40px;
+        height: 50px;
+        width: auto;
+    }
+    
+    .sidebar .material-icons {
+        position: fixed;
+        top: 20px;
+        right: 15px;
+        color: red;
+        font-size: 4rem;
+        cursor: pointer;
+    
+    }
+    
+    .sidebar .material-icons:hover{
+        color: #000;
+    }
+    
+    .sidebar-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .sidebar a {
+        color: red;
+        padding: 10px 10px 10px 20px;
+        font-size: 2rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+       
+      .sidebar a.active {
+        color: #000;
+      }
+      
+      .sidebar a:hover:not(.active) {
+        color: #000;
+      }
+
+      /*********MAIN***********/
+
+    main{
+        margin-top: 80px;
+        min-height: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact{
+        display: none;
+    }
+
+    /*@media all and (min-height: 700px) {
+        footer{
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+        }
+    }*/
+    
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    
+    .side{
+        display: none;
+    }
+
+}
+
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .side{
+        display: none;
+    }
+
+
+}
+
+@media all and (max-width: 480px) {
+
+    .search-bar {
+        width: 60vw;
+    }
+
+    .search-bar input{
+        width: 90%;
+    }
+
+    .form-container .title{
+        font-size: 1.3rem;
+    }
+    .side{
+        display: none;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container{
+        width: 70vw;
+
+    }
+
+    .my-form-element, .btn-primary{
+        width: 90%;
+    }
+
+    .form-container input{
+        width: 80%;
+        font-size: 1rem;
+    }
+
+
+    .btn-primary{
+        font-size: 1rem;
     }
 }
