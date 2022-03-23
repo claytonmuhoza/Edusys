@@ -13,7 +13,7 @@ function openLeftMenu() {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i].getBoundingClientRect().top;
       var elementVisible = 40;
-  
+
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
       } else {
