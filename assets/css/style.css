@@ -1,20 +1,29 @@
+*{
+    font-family: 'Outfit', sans-serif;
+    
+}
+
 html,body{
-    height: 100% auto;
+    height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
     background: url(https://edusys.ulbu.bi/theme/bg_uldu1.jpg) center fixed no-repeat ;
     background-size: cover;
-    font-family: 'Outfit', sans-serif;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 #page-container{
+    height: 100%;
     width: auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    /*flex-direction: column;*/
 }
-
+.contente-wrap{
+    min-height: 600px;
+}
 /******************************/
 
 .my-nav{
@@ -64,7 +73,7 @@ nav a{
     text-decoration: none;
     font-size: 1.4rem;
     font-weight: 700;
-    color: rgba(255, 0, 0, 0.439);
+    color: rgba(255, 0, 0, 0.837);
 }
 
 
@@ -180,8 +189,10 @@ main{
     width: 100%;*/
     /*height: 700px;*/
     margin-top: 80px;
-    height: 100vh;
+    height: auto 100vh;
+    min-height: 600px;
     width: 100vw;
+    margin-bottom: 15px;
     /*background: url(https://edusys.ulbu.bi/theme/bg_uldu1.jpg) center fixed no-repeat ;
     background-size: cover;*/
 }
@@ -252,9 +263,9 @@ form{
 .form-container{
     width: 350px;
     /*border-left: 1px solid #ffff;
-    line-height: 50px;
-    border-right: 1px solid #fff;*/
-    box-shadow: 2px 2px 10px rgb(126, 126, 175);
+    line-height: 50px;*/
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(154, 144, 238, 0.953);
     text-align: center;
 }
 
@@ -320,30 +331,125 @@ main .material-icons{
 .contact{
     display: none;
     height: 50px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     background-color: rgb(255, 255, 255);
 }
 
-.banner{
-    display: ;
+.the-banner{
+    background: url(https://edusys.ulbu.bi/assets/images/gross_line_2.jpg) #FF0000 no-repeat ;
+    background-size: cover;
     height: 100px;
-    position: absolute;
-    bottom: -120px;
+    width: 930px;
+    position: relative;
+    bottom: 45px;
+    display: flex;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 1s all ease-out;
 }
+ 
+
+
+.the-banner.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@keyframes anim{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.banner-feature{
+    height: 70%;
+    margin: 15px;
+
+}
+
+.banner-feature-left{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-envoyer{
+    width: 100px;
+    height: 30px;
+    margin-right: 15px;
+    color: #fff;
+    font-weight: 600;
+    background-color: #FF0000;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.banner-feature-right{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.banner-feature-left-text{
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #000;
+}
+
+.banner-feature-right-text{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.feature{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-feature-left .material-icons{
+   font-size: 3.5rem;
+   width: 3.5rem;
+   margin: 0 10px 0 0;
+   color: #000;
+}
+
+.banner-feature-right .material-icons{
+    font-size: 3.5rem;
+    width: 3.5rem;
+    margin: 0 10px 0 0;
+    color: #fff;
+ }
+
 
 /******************/
 
 footer{
-    background-color: #162d56;
+    
     width: 100%;
-    min-height: 40px;
-    padding: 10px;
+   
+    
 
 }
 .footer-content{
+    background-color: #162d56;
+    min-height: 40px;
     width: 100%;
+    padding: 10px;
     text-align: center;
 }
 footer span{
@@ -362,15 +468,22 @@ footer a{
 
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
+    #sidebar{
+        display: none;
+    }
     .main-content{
         gap: 200px;
     }
 }
 
-@media all and (max-width: 1024px) {
-    html{
-
+@media all and (min-width: 1024px) {
+    .sidebar{
+        display: none;
     }
+}
+
+@media all and (max-width: 1024px) {
+
     body{
         min-height: 100%;
         /*min-height: 100%;*/
@@ -443,17 +556,17 @@ footer a{
     }
     
     .sidebar-logo img{
-        margin-left: -40px;
+        margin-left: -20px;
         height: 50px;
         width: auto;
     }
     
     .sidebar .material-icons {
         position: fixed;
-        top: 20px;
+        top: 15px;
         right: 15px;
         color: red;
-        font-size: 4rem;
+        font-size: 3rem;
         cursor: pointer;
     
     }
@@ -467,20 +580,18 @@ footer a{
         flex-direction: column;
     }
     
-    .sidebar a {
+    .sidebar-menu a {
         color: red;
         padding: 10px 10px 10px 20px;
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 600;
         text-decoration: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.166);
       }
        
-      .sidebar a.active {
-        color: #000;
-      }
-      
-      .sidebar a:hover:not(.active) {
-        color: #000;
+      .sidebar a:hover {
+          background-color: #FF0000;
+        color: #fff;
       }
 
       /*********MAIN***********/
@@ -509,7 +620,7 @@ footer a{
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
     
-    .side{
+    .side,.sidebar{
         display: none;
     }
 
@@ -517,7 +628,7 @@ footer a{
 
 
 @media all and (min-width: 480px) and (max-width: 768px) {
-    .side{
+    .side,.side{
         display: none;
     }
 

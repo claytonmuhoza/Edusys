@@ -6,10 +6,20 @@ function openLeftMenu() {
     document.getElementById("sidebar").style.display = "none";
   }
   
-  function openRightMenu() {
-    document.getElementById("rightMenu").style.display = "block";
+  function reveal() {
+    var reveals = document.querySelectorAll(".the-banner");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 40;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
   }
   
-  function closeRightMenu() {
-    document.getElementById("rightMenu").style.display = "none";
-  }
+  window.addEventListener("scroll", reveal);
